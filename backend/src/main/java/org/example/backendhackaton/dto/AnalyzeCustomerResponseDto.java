@@ -14,4 +14,8 @@ public class AnalyzeCustomerResponseDto {
     @Schema(description = "Предложения", example = "Это предложение")
     private String recommendations;
 
+    public AnalyzeCustomerResponseDto(String burnRatePercent, String recommendations) {
+        this.burnRatePercent = burnRatePercent;
+        this.recommendations = recommendations;
+    }
 }

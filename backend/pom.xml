@@ -54,8 +54,6 @@
             <groupId>com.ai</groupId>
             <artifactId>sparkle</artifactId>
             <version>1.0.0</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/original-sparkle-1.0.0.jar</systemPath>
         </dependency>
     </dependencies>
 
