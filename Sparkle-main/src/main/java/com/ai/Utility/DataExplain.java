@@ -8,7 +8,7 @@ public class DataExplain {
             return "";
         }
         else if(normalizedInput <= 1)
-            return "давно небыло отпуска";
+            return "отпуск отсутствовал в течение длительного периода";
         throw new RuntimeException("Date not normalized");
     }
     public static String explainCompanyType(double normalizedInput)
@@ -27,7 +27,7 @@ public class DataExplain {
         {
             return "";
         }
-        else if(normalizedInput == 0){return "работает на месте";}
+        else if(normalizedInput == 0){return "нет возможности уйти на удалённую работу";}
         throw new RuntimeException("Work from home not normalized");
     }
     public static String explainworkLoad(double normalizedInput)
@@ -38,11 +38,11 @@ public class DataExplain {
         }
         else if(normalizedInput <= 0.65)
         {
-            return "средняя нагруженность на работе";
+            return "загруженность на работе — средняя";
         }
         else if (normalizedInput <= 1)
         {
-            return "высокая нагруженность на работе";
+            return "загруженность на работе — высокая";
         }
         throw new RuntimeException("Workload not normalized");
     }
@@ -52,13 +52,9 @@ public class DataExplain {
         {
             return "";
         }
-        else if(normalizedInput <= 0.7)
-        {
-            return "средний рабочий день";
-        }
         else if (normalizedInput <= 1.0)
         {
-            return "длинный рабочий день";
+            return ("продолжительный рабочий день - " + ((int)(normalizedInput * 9 + 1))) + " часов";
         }
         throw new RuntimeException("Worktime not normalized");
     }
@@ -70,11 +66,11 @@ public class DataExplain {
         }
         else if(normalizedInput <= 0.6)
         {
-            return "средняя психичская переутомленность";
+            return "средний уровень психической утомляемости";
         }
         else if(normalizedInput <= 1.0)
         {
-            return "высокая психичская переутомленность";
+            return "высокий уровень психической утомляемости";
         }
         throw new RuntimeException("FatigueScore not normalized");
     }
