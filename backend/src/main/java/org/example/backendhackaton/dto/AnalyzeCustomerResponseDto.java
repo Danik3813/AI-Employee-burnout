@@ -5,8 +5,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
-@AllArgsConstructor
+//@AllArgsConstructor
 public class AnalyzeCustomerResponseDto {
+    public AnalyzeCustomerResponseDto(String burnRatePercent, String recommendations) {
+        this.burnRatePercent = burnRatePercent;
+        this.recommendations = recommendations;
+    }
 
     @Schema(description = "Процент выгорания", example = "60 %")
     private String burnRatePercent;
