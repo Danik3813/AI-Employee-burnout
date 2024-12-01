@@ -6,6 +6,7 @@ import com.ai.dataSet.WeightData;
 
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
+import java.text.DecimalFormat;
 
 public class Sparkle {
 
@@ -69,6 +70,8 @@ public class Sparkle {
     }
 
     public double getBurnRate(Data data){
-        return ensemble.getResult(data);
+        double answer = ensemble.getResult(data);
+        DecimalFormat df = new DecimalFormat("#.##");
+        return Double.valueOf(df.format(answer));
     }
 }
