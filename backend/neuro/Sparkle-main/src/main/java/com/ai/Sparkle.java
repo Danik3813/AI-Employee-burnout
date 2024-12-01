@@ -39,28 +39,28 @@ public class Sparkle {
         }
         t = DataExplain.explainCompanyType(weights.getCompanyTypeWeight());
         if(!t.isEmpty()){
-            f = true;
             ans += (f ? ", " : "") + t;
+            f = true;
         }
         t = DataExplain.explainWFH(weights.getDistWorkWeight());
         if(!t.isEmpty()){
-            f = true;
             ans += (f ? ", " : "") + t;
+            f = true;
         }
         t = DataExplain.explainworkLoad(weights.getWorkloadWeight());
         if(!t.isEmpty()){
-            f = true;
             ans += (f ? ", " : "") + t;
+            f = true;
         }
         t = DataExplain.explainworkTime(weights.getWorkingTimeWeight());
         if(!t.isEmpty()){
-            f = true;
             ans += (f ? ", " : "") + t;
+            f = true;
         }
         t = DataExplain.explainFatigueScore(weights.getFatigueScoreWeight());
         if(!t.isEmpty()){
-            f = true;
             ans += (f ? ", " : "") + t;
+            f = true;
         }
         if(f) ans += ".";
         else ans += "Нет ключевых факторов.";
